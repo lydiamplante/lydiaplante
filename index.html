@@ -2,25 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lydia Plante – Portfolio</title>
+  <title>Lydia Plante – Engineering Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <header>
-    <h1>Lydia Plante</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body>
+<div id="v-progress-container">
+  <div id="v-progress-bar"></div>
+  <div id="v-progress-label">0%</div>
+</div>
+
+
+  <!-- HEADER / NAV -->
+  <header class="nav">
+  <div class="nav-left">
+  <span class="lp-logo">LP</span> ENGINEERING PORTFOLIO
+</div>
+    <nav class="nav-right">
+  <a class="nav-link" href="index.html">Home</a>
+  <a class="nav-link" href="about.html">About</a>
+  <a class="nav-link" href="portfolio.html">Portfolio</a>
+  <a class="nav-link" href="contact.html">Contact</a>
+  <a class="resume-btn" href="LP ENGR Resume 6_23_26.pdf">RESUME</a>
+</nav>
   </header>
 
-  <section id="hero">
-    <h2>Engineering Portfolio</h2>
-    <p>Recreating my Base44/Squarespace site, but fully free.</p>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <p class="subheading">MECHANICAL ENGINEER – CLEMSON UNIVERSITY</p>
+    <h1 class="name">Lydia Plante</h1>
+    <h2 class="title">Mechanical Engineer</h2>
+
+    <p class="description">
+      Mechanical engineering student with strong CAD and fabrication skills, selected as 1 of 14 to represent Clemson at IREC 2026. Passionate about complex mechanical systems across aerospace, energy, marine robotics, and themed attraction development.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn-primary" href="portfolio.html">VIEW PORTFOLIO →</a>
+      <a class="btn-outline" href="LP ENGR Resume 6_23_26.pdf">DOWNLOAD RESUME</a>
+    </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- STATS ROW -->
+  <section class="stats">
+  <div class="stat-item">
+    <div class="stat-value">3.48</div>
+    <div class="stat-label">GPA</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-value">3rd Year</div>
+    <div class="stat-label">Honors College</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-value">Rocket Club</div>
+    <div class="stat-label">Aerostructures & Recovery</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-value">2028</div>
+    <div class="stat-label">Expected Graduation</div>
+  </div>
+</section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="featured-projects" id="portfolio">
+    <h2>Featured Projects</h2>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="testlaunch.jpg" alt="Rocket Engineering">
+        <h3>Clemson University Rocket Engineering</h3>
+        <p>Served on the Aerostructures and Recovery subteams within Clemson University Rocket Engineering, contributing to composite manufacturing, structural optimization, and the creation of precision technical drawings for flight‑ready components.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="mechsystemhopebetter.png" alt="Design of Mechanical Systems">
+        <h3>Design of Mechanical Systems</h3>
+        <p>Completed a comprehensive final project centered on designing a four‑bar mechanism, integrating gear and motor selection with full kinematic and motion analysis to produce a validated mechanical system.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="Solidworks Table.png" alt="SOLIDWORKS Class">
+        <h3>Engineering Graphics Class Projects</h3>
+        <p>Developed three major SOLIDWORKS projects focused on design intent, dimensional accuracy, error analysis, and reverse engineering, resulting in production‑ready models and technical drawings.
+        </p>
+      </div>
+    </div>
+
+    <a class="btn-outline see-all" href="portfolio.html">SEE ALL PROJECTS</a>
+
+  </section>
+
+  <!-- TECHNICAL DRAWINGS -->
+  <section class="technical-drawings">
+    <h2>Technical Drawings</h2>
+    <p>
+      GD&T-compliant engineering drawings produced for Clemson University Rocket Engineering (Onshape) and
+      SolidWorks class projects.
+    </p>
+
+<div class="drawing-carousel">
+  <img src="Eyebolt.png">
+  <img src="Fin 1-8 Thickness.png">
+  <img src="lmplant-P2-assembly-drawing.jpg">
+  <img src="Main_Middle_Bulkhead.png">
+  <img src="Motor Centering Ring.png">
+  <img src="Plate BlueRaven.png">
+  <img src="flangenut.png">
+  <img src="Plate Featherweight.png">
+</div>
+
+  </section>
+
+  <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-column">
+    <h3>ENGINEERING PORTFOLIO</h3>
+    <p>
+      Lydia Plante — ME Student, Clemson Honors College.<br>
+      Aerostructures, CAD, and precision design.
+    </p>
+  </div>
+
+  <div class="footer-column">
+    <h3>NAVIGATION</h3>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="footer-column">
+    <h3>CONNECT</h3>
+    <a href="https://www.linkedin.com/in/lydiaplante/" target="_blank">LinkedIn</a>
+    <a href="mailto:lydia.plante@gmail.com">Email</a>
+    <a href="LP ENGR Resume 6_23_26.pdf" target="_blank">↓ Download Resume (PDF)</a>
+  </div>
+</footer>
+
+<div id="scroll-top-btn">↑</div>
+
+<!-- Scroll Progress Bar Animation -->
+<script>
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = scrollTop / docHeight;
+
+    const bar = document.getElementById("v-progress-bar");
+    const label = document.getElementById("v-progress-label");
+
+    const percent = Math.round(progress * 100);
+
+    bar.style.height = percent + "%";
+    label.style.bottom = percent + "%";
+    label.textContent = percent + "%";
+  });
+</script>
+
+<script>
+  const scrollBtn = document.getElementById("scroll-top-btn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.classList.add("visible");
+    } else {
+      scrollBtn.classList.remove("visible");
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
 </body>
 </html>
